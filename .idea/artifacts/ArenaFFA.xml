@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ArenaFFA">
+    <output-path>$PROJECT_DIR$/out/artifacts/ArenaFFA</output-path>
+    <root id="archive" name="ArenaFFA.jar">
+      <element id="module-output" name="ArenaFFA" />
+    </root>
+  </artifact>
+</component>
