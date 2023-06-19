@@ -6,6 +6,7 @@ import fr.alekesi.arenaffa.manager.Register;
 import fr.alekesi.arenaffa.utils.Biomes;
 import org.bukkit.Bukkit;
 import org.bukkit.Statistic;
+import org.bukkit.World;
 import org.bukkit.WorldBorder;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -43,6 +44,7 @@ public class main extends JavaPlugin {
                 updateBoard(board);
             }
         }, 0, 20);
+        World world = Bukkit.getWorld("world");
         WorldBorder wb = world.getWorldBorder();
         wb.setCenter(0,0);
         wb.setSize(100);
