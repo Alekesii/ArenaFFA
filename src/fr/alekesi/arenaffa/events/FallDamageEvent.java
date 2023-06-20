@@ -9,10 +9,18 @@ import org.bukkit.event.entity.EntityDamageEvent;
 public class FallDamageEvent implements Listener {
 
     @EventHandler
-    public void onPlayerFall(EntityDamageEvent e) {
-        if (e.getEntity() instanceof Player) {
-            e.setCancelled(true);
+    public void onDamage(EntityDamageEvent event){
+        if(event.getEntity() instanceof Player){
+            Player p = (Player) event.getEntity();
+
+            if(event.getCause() == EntityDamageEvent.DamageCause.FALL){
+                event.setCancelled(true);
+            }
+            if(p.getLastDamageCause().getCause() == EntityDamageEvent.DamageCause.FALL){
+                event.setCancelled(true);
+            }
         }
     }
 }
+
 

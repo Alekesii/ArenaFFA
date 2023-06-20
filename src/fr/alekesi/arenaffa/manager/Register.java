@@ -1,7 +1,9 @@
 package fr.alekesi.arenaffa.manager;
 
 import fr.alekesi.arenaffa.events.FallDamageEvent;
+import fr.alekesi.arenaffa.events.FoodEvent;
 import fr.alekesi.arenaffa.events.JoinEvent;
+import fr.alekesi.arenaffa.events.RespawnEvent;
 import fr.alekesi.arenaffa.items.StartItem;
 import fr.alekesi.arenaffa.main;
 
@@ -18,7 +20,8 @@ public class Register {
             RegisterListener(new JoinEvent(), main.getInstance());
             RegisterListener(new FallDamageEvent(), main.getInstance());
             RegisterListener(new StartItem(), main.getInstance());
-
+            RegisterListener(new FoodEvent(), main.getInstance());
+            RegisterListener(new RespawnEvent(), main.getInstance());
         }
     }
 
